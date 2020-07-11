@@ -9,6 +9,7 @@ function clickCount(){
   return counter;
 }
 
+// random broj je sada deklarisan van funkcije da se ne bi promenio na svaki klik
 let broj = Math.ceil(Math.random()*100);
 // Funkcija randomBroj generise neki broj od 0 do 100
 function randomBroj(){
@@ -37,6 +38,7 @@ function todo(){
   }
 }
 
+// Funkcija koja prikazuje random broj
 function prikaziBroj(){
   document.getElementById('test').innerHTML = broj;
 }
