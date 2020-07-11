@@ -9,10 +9,10 @@ function clickCount(){
   return counter;
 }
 
+let broj = Math.ceil(Math.random()*100);
 // Funkcija randomBroj generise neki broj od 0 do 100
 function randomBroj(){
   let x = document.forma_random.num.value;  // x je promenljiva kojoj dodeljujemo vrednost koju korisnik unosi na ekranu u textbox-u
-  let broj = Math.ceil(Math.random()*100);
 
   // U if petlji uporedjujemo unet broj od strane korisnika sa random brojom
   if(x == broj){
@@ -35,5 +35,9 @@ function todo(){
   else {
     document.getElementById('id_ispis').innerHTML = "Iskoristio si 5 pokusaja!";
   }
+}
+
+function prikaziBroj(){
+  document.getElementById('test').innerHTML = broj;
 }
 
