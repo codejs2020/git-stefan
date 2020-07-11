@@ -53,12 +53,15 @@ for (k in slova){
 function konverter(){
   let tekst = document.getElementById('id_text').value;
 
+  // od ovih 6 slova, samo mi malo lj prevodi u cirilicu
   tekst = tekst.replace(/lj/g, 'љ');
   tekst = tekst.replace(/Lj/g, 'Љ');
   tekst = tekst.replace(/dž/g, 'џ');
   tekst = tekst.replace(/Dž/g, 'Џ');
   tekst = tekst.replace(/nj/g, 'њ');
   tekst = tekst.replace(/Nj/g, 'Њ');
+
+  // Slova ispod se normalno konvertuju
   tekst = tekst.replace(/a/g, 'а');
   tekst = tekst.replace(/b/g, 'б');
   tekst = tekst.replace(/c/g, 'ц');
