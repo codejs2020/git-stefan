@@ -48,23 +48,72 @@ for (k in slova){
   //console.log(slova[k]);
 }
 
-// 10. i 11. - konvertuje latinicu u cirilicu
-// Treba da skontam kako da ispisem cirilicu u html
-const latinica = ['A','B','C','Č','Ć','D','Dž','Đ','E','F','G','H','I','J','K','L','Lj','M','N','Nj','O','P','R','S','Š','T','U','V','Z','Ž'];
-const cirilica = ['А','Б','Ц','Ч','Ћ','Д','Џ','Ђ','Е','Ф','Г','Х','И','Ј','К','Л','Љ','М','Н','Њ','О','П','Р','С','Ш','Т','У','В','З','Ж'];
-let temp;
+// 10. i 11. - konvertuje latinicu u cirilicu - nema veze sa nizovima
 
 function konverter(){
-  let tekst = document.getElementById('ime').value;
+  let tekst = document.getElementById('id_text').value;
 
-  tekst.split('');
+  tekst = tekst.replace(/lj/g, 'љ');
+  tekst = tekst.replace(/Lj/g, 'Љ');
+  tekst = tekst.replace(/dž/g, 'џ');
+  tekst = tekst.replace(/Dž/g, 'Џ');
+  tekst = tekst.replace(/nj/g, 'њ');
+  tekst = tekst.replace(/Nj/g, 'Њ');
+  tekst = tekst.replace(/a/g, 'а');
+  tekst = tekst.replace(/b/g, 'б');
+  tekst = tekst.replace(/c/g, 'ц');
+  tekst = tekst.replace(/č/g, 'ч');
+  tekst = tekst.replace(/ć/g, 'ћ');
+  tekst = tekst.replace(/d/g, 'д');
+  tekst = tekst.replace(/đ/g, 'ђ');
+  tekst = tekst.replace(/e/g, 'е');
+  tekst = tekst.replace(/f/g, 'ф');
+  tekst = tekst.replace(/g/g, 'г');
+  tekst = tekst.replace(/h/g, 'х');
+  tekst = tekst.replace(/i/g, 'и');
+  tekst = tekst.replace(/j/g, 'ј');
+  tekst = tekst.replace(/k/g, 'к');
+  tekst = tekst.replace(/l/g, 'л');
+  tekst = tekst.replace(/m/g, 'м');
+  tekst = tekst.replace(/n/g, 'н');
+  tekst = tekst.replace(/o/g, 'о');
+  tekst = tekst.replace(/p/g, 'п');
+  tekst = tekst.replace(/r/g, 'р');
+  tekst = tekst.replace(/s/g, 'с');
+  tekst = tekst.replace(/š/g, 'ш');
+  tekst = tekst.replace(/t/g, 'т');
+  tekst = tekst.replace(/u/g, 'у');
+  tekst = tekst.replace(/v/g, 'в');
+  tekst = tekst.replace(/z/g, 'з');
+  tekst = tekst.replace(/ž/g, 'ж');
 
-  for (let i=0; i<tekst.length; i++){
-    for (let j=0; j<30; j++){
-      if(tekst[i] == latinica[j]){
-        temp[i] = cirilica[j];
-      }
-    }
-  }
-  document.getElementById('cirilica').innerHTML = temp;
+  tekst = tekst.replace(/A/g, 'А');
+  tekst = tekst.replace(/B/g, 'Б');
+  tekst = tekst.replace(/C/g, 'Ц');
+  tekst = tekst.replace(/Č/g, 'Ч');
+  tekst = tekst.replace(/Ć/g, 'Ћ');
+  tekst = tekst.replace(/D/g, 'Д');
+  tekst = tekst.replace(/Đ/g, 'Ђ');
+  tekst = tekst.replace(/E/g, 'Е');
+  tekst = tekst.replace(/F/g, 'Ф');
+  tekst = tekst.replace(/G/g, 'Г');
+  tekst = tekst.replace(/H/g, 'Х');
+  tekst = tekst.replace(/I/g, 'И');
+  tekst = tekst.replace(/J/g, 'Ј');
+  tekst = tekst.replace(/K/g, 'К');
+  tekst = tekst.replace(/L/g, 'Л');
+  tekst = tekst.replace(/M/g, 'М');
+  tekst = tekst.replace(/N/g, 'Н');
+  tekst = tekst.replace(/O/g, 'О');
+  tekst = tekst.replace(/P/g, 'П');
+  tekst = tekst.replace(/R/g, 'Р');
+  tekst = tekst.replace(/S/g, 'С');
+  tekst = tekst.replace(/Š/g, 'Ш');
+  tekst = tekst.replace(/T/g, 'Т');
+  tekst = tekst.replace(/U/g, 'У');
+  tekst = tekst.replace(/V/g, 'В');
+  tekst = tekst.replace(/Z/g, 'З');
+  tekst = tekst.replace(/Ž/g, 'Ж');
+
+  document.getElementById('cirilica').innerHTML = tekst;
 }
