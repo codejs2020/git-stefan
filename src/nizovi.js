@@ -50,9 +50,7 @@ for (k in slova){
 
 // 10. i 11. - konvertuje latinicu u cirilicu - nema veze sa nizovima
 
-function konverter(){
-  let tekst = document.getElementById('id_text').value;
-
+function konverter(tekst){
   // od ovih 6 slova, samo mi malo lj prevodi u cirilicu
   tekst = tekst.replace(/lj/g, 'љ');
   tekst = tekst.replace(/Lj/g, 'Љ');
@@ -118,5 +116,10 @@ function konverter(){
   tekst = tekst.replace(/Z/g, 'З');
   tekst = tekst.replace(/Ž/g, 'Ж');
 
-  document.getElementById('cirilica').innerHTML = tekst;
+  return tekst;
+}
+
+function ispis(){
+  let unos = document.getElementById('id_text').value;
+  document.getElementById('cirilica').innerHTML = konverter(unos);
 }
