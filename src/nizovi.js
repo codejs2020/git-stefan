@@ -51,15 +51,14 @@ for (k in slova){
 // 10. i 11. - konvertuje latinicu u cirilicu - nema veze sa nizovima
 
 function konverter(tekst){
-  // od ovih 6 slova, samo mi malo lj prevodi u cirilicu
   tekst = tekst.replace(/lj/g, 'љ');
   tekst = tekst.replace(/Lj/g, 'Љ');
   tekst = tekst.replace(/dž/g, 'џ');
+  tekst = tekst.replace(/dz/g, 'џ');
   tekst = tekst.replace(/Dž/g, 'Џ');
+  tekst = tekst.replace(/Dz/g, 'Џ');
   tekst = tekst.replace(/nj/g, 'њ');
   tekst = tekst.replace(/Nj/g, 'Њ');
-
-  // Slova ispod se normalno konvertuju
   tekst = tekst.replace(/a/g, 'а');
   tekst = tekst.replace(/b/g, 'б');
   tekst = tekst.replace(/c/g, 'ц');
@@ -87,7 +86,6 @@ function konverter(tekst){
   tekst = tekst.replace(/v/g, 'в');
   tekst = tekst.replace(/z/g, 'з');
   tekst = tekst.replace(/ž/g, 'ж');
-
   tekst = tekst.replace(/A/g, 'А');
   tekst = tekst.replace(/B/g, 'Б');
   tekst = tekst.replace(/C/g, 'Ц');
